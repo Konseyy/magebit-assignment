@@ -53,6 +53,11 @@ main {
     background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%); }
 
 #emailForm {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
   min-height: 274px; }
   #emailForm a {
     color: #131821;
@@ -64,6 +69,33 @@ main {
   #emailForm #confirmTerms {
     display: flex;
     flex-direction: row; }
+  #emailForm h1 {
+    font-family: Georgia;
+    font-size: 24px;
+    line-height: 34px; }
+  #emailForm > p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #6a707b; }
+  #emailForm input[type='text'] {
+    margin-top: 20px; }
+  #emailForm #confirmTerms {
+    margin-top: 20px; }
+    #emailForm #confirmTerms input[type='checkbox'] {
+      display: none; }
+    #emailForm #confirmTerms input[type='checkbox'] + label {
+      background: #999;
+      height: 16px;
+      width: 16px;
+      display: inline-block;
+      padding: 0 0 0 0px; }
+    #emailForm #confirmTerms input[type='checkbox']:checked + label {
+      background: #0080ff;
+      height: 16px;
+      width: 16px;
+      display: inline-block;
+      padding: 0 0 0 0px; }
 
 #socialsContainer {
   height: 100%;
