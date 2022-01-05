@@ -1,8 +1,144 @@
-html, body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
 }
-body{
-    background-color: white;
-    color:black;
+body {
+   background-color: lightgray;
+   color: black;
+   font-family: Arial;
+}
+ul {
+   list-style: none;
+}
+#navbar {
+   position: relative;
+   height: 66px;
+   background-color: #ffffff;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   #pineapple {
+      align-self: flex-start;
+      position: relative;
+      top: 10px;
+      margin-left: 20px;
+      font-size: 40px;
+   }
+   .navRight {
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      a {
+         font-size: 14px;
+         line-height: 24px;
+         color: #6a707b;
+         text-decoration: none;
+      }
+      li {
+         margin-right: 20px;
+      }
+   }
+}
+main {
+   height: 100%;
+   background-image: url('../img/image_summer.png');
+   background-size: auto 100%;
+   background-repeat: no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   #emailBoxContainer {
+		display: flex;
+		flex-direction: column;
+      width: 90%;
+      height: 50%;
+      background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%);
+      
+   }
+}
+#emailForm {
+   min-height: 274px;
+	a {
+		color: #131821;
+		text-decoration-line: underline;
+	}
+	a:hover {
+		color: #4066a5;
+	}
+	a:active {
+		color: #233759;
+	}
+	#confirmTerms{
+		display:flex;
+		flex-direction: row;
+	}
+}
+#socialsContainer {
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+#socials {
+	position: relative;
+	margin-bottom: 30px;
+   display: flex;
+   flex-direction: row;
+	gap: 10px;
+	// height: 46px;
+   a {
+      position: relative;
+      height: 42px;
+      width: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 2px solid #e2e3e4;
+      font-size: 16px;
+      text-decoration: none;
+   }
+   a:before {
+      font-size: 16px;
+      color: #131821;
+      opacity: 0.3;
+   }
+   a:hover:before {
+      color: #ffffff;
+      opacity: 1;
+   }
+   a.icon-ic_facebook:hover {
+      background-color: #4267b2;
+      border: 2px solid#4267B2;
+   }
+   a.icon-ic_instagram:hover {
+      background-color: #c13584;
+      border: 2px solid#C13584;
+   }
+   a.icon-ic_twitter:hover {
+      background-color: #1da1f2;
+      border: 2px solid#1DA1F2;
+   }
+   a.icon-ic_youtube:hover {
+      background-color: #ff0000;
+      border: 2px solid#FF0000;
+   }
+   a.icon-ic_facebook:active {
+      background-color: #2f4a80;
+      border: 2px solid#2F4A80;
+   }
+   a.icon-ic_instagram:active {
+      background-color: #8f2762;
+      border: 2px solid#8F2762;
+   }
+   a.icon-ic_twitter:active {
+      background-color: #177fbf;
+      border: 2px solid#177FBF;
+   }
+   a.icon-ic_youtube:active {
+      background-color: #cc0000;
+      border: 2px solid#CC0000;
+   }
 }

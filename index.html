@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <script
-      src="https://unpkg.com/react@17/umd/react.production.min.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@17/umd/react-dom.production.js"
-      crossorigin
-    ></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <title>Magebit Assignment</title>
-  </head>
-  <body>
-    <nav>
-      <ul id="navbar">
-        <li id="pineapple" class="navItemLeft"></li>
-        <li class="navItemRight">About</li>
-        <li class="navItemRight">How it works</li>
-        <li class="navItemRight">Contact</li>
-      </ul>
-    </nav>
-    <main>
-      <div id="emailBoxContainer"></div>
-    </main>
-    
-    <script type="text/babel" src="components/EmailBox.js"></script>
-  </body>
+   <head>
+      <title>Magebit Assignment</title>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/main.css" />
+      <link rel="stylesheet" href="css/icon-font.css" />
+   </head>
+   <body>
+      <nav id="navbar">
+         <div id="pineapple" class="icon-logo_pineapple"></div>
+         <ul class="navRight">
+            <li class="navItemRight">
+               <a href="#">About</a>
+            </li>
+            <li class="navItemRight">
+               <a href="#">How it works</a>
+            </li>
+            <li class="navItemRight">
+               <a href="#">Contact</a>
+            </li>
+         </ul>
+      </nav>
+      <main>
+         <div id="emailBoxContainer">
+            <form id="emailForm">
+					<h1>Subscribe to newsletter</h1>
+					<p>Subscribe to our newsletter and get 10% discount on pineapple glasses.</p>
+					<input type="text">
+					<div id="confirmTerms">
+						<input id="agreeToTerms" type="checkbox">
+						<p>I agree to <a id="terms" href="#">terms of service</a></p>
+					</div>
+				</form>
+            <div id="socialsContainer">
+               <ul id="socials">
+                  <li>
+                     <a href="#" class="icon-ic_facebook"></a>
+                  </li>
+                  <li>
+                     <a href="#" class="icon-ic_instagram"> </a>
+                  </li>
+                  <li>
+                     <a href="#" class="icon-ic_twitter"></a>
+                  </li>
+                  <li>
+                     <a href="#" class="icon-ic_youtube"></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </main>
+   </body>
 </html>

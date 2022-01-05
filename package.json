@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive",
-    "babel": "npx babel --watch src --out-dir ./components --presets react-app/prod"
+    "sass": "node-sass -w scss/ -o css/ --recursive"
   },
   "repository": {
     "type": "git",
@@ -18,9 +17,6 @@
   },
   "homepage": "https://github.com/Konseyy/magebit-assignment#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2",
-    "node-sass": "^7.0.1",
-    "uniq": "^1.0.1"
+    "node-sass": "^7.0.1"
   }
 }
