@@ -1,0 +1,37 @@
+version: "3.8"
+x-common-variables: &common-variables
+  MYSQL_USER: MYSQL_USER
+  MYSQL_PASSWORD: MYSQL_PASSWORD
+services:
+  mysql_db:
+    image: mysql
+    restart: always
+    volumes:
+      - /db/mysql
+    ports:
+      - "3002:3306"
+    environment:
+      <<: *common-variables
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_HOST: localhost
+  phpmyadmin:
+      image: phpmyadmin:latest
+      restart: always
+      ports:
+        - 3003:80
+      depends_on:
+        - mysql_db
+      environment:
+        PMA_HOST: mysql_db
+  # client:
+  #   stdin_open: true
+  #   environment:
+  #     - CHOKIDAR_USEPOLLING=true
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: ./frontend
+  #   volumes:
+  #     - /app/frontend/node_modules
+  #     - ./frontend:/app/frontend
+  #   ports: 
+  #     - 3001:3000
