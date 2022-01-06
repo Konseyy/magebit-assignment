@@ -2,10 +2,9 @@ html,
 body {
    height: 100%;
    width: 100%;
-   overflow: hidden;
+   overflow-x: hidden;
 }
 body {
-   background-color: lightgray;
    color: black;
    font-family: Arial;
 }
@@ -13,7 +12,7 @@ ul {
    list-style: none;
 }
 #navbar {
-   position: relative;
+   width: 100%;
    height: 66px;
    background-color: #ffffff;
    display: flex;
@@ -41,21 +40,35 @@ ul {
       }
    }
 }
-main {
-   height: 100%;
-   background-image: url('../img/image_summer.png');
-   background-size: auto 100%;
-   background-repeat: no-repeat;
+#floatingBox {
    display: flex;
    align-items: center;
    justify-content: center;
-   #emailBoxContainer {
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-      height: 50%;
-      background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%);
-   }
+   flex: 1 1 auto;
+}
+#content {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+}
+#background {
+   height: 100%;
+   width: 100%;
+   background-image: url('../img/image_summer.png');
+   background-size: auto 100%;
+   background-repeat: no-repeat;
+}
+#emailBoxContainer {
+   min-width: 355px;
+   min-height: 370px;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   width: 90%;
+   height: 50%;
+   background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%);
 }
 #emailForm {
    display: flex;
@@ -233,5 +246,53 @@ main {
    a.icon-ic_youtube:active {
       background-color: #cc0000;
       border: 2px solid#CC0000;
+   }
+}
+@media only screen and (min-width: 600px) {
+   #emailBoxContainer {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      // padding-left: 100px;
+      max-width: 400px;
+      background: none;
+   }
+   #floatingBox {
+      background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%);
+   }
+   #background {
+      background-size: cover;
+      // width: auto;
+   }
+   #emailForm {
+      position: relative;
+      .inputContainer {
+         // position:absolute;
+         // width: 45vw;
+      }
+   }
+   body {
+      display: flex;
+      flex-direction: row;
+   }
+   #content {
+      position: relative;
+      min-width: 600px;
+      background-color: #ffffff;
+   }
+   #navbar {
+      align-self: flex-start;
+      margin-top: 100px;
+      #pineapple {
+         margin-left: 100px;
+      }
+      .navRight:last-child {
+         margin-right: 100px;
+      }
+   }
+   #socialsContainer {
+      height: auto;
    }
 }
