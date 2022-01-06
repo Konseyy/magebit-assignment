@@ -11,20 +11,26 @@ body {
 ul {
   list-style: none; }
 
+.hideMobile {
+  display: none; }
+
 #navbar {
   width: 100%;
   height: 66px;
   background-color: #ffffff;
   display: flex;
-  flex-direction: row;
-  align-items: center; }
+  flex-direction: row; }
+  #navbar .navLeft {
+    display: flex;
+    align-items: center; }
   #navbar #pineapple {
     align-self: flex-start;
     position: relative;
-    top: 10px;
     margin-left: 20px;
-    font-size: 40px; }
+    font-size: 40px;
+    margin-top: 10px; }
   #navbar .navRight {
+    align-self: center;
     margin-left: auto;
     display: flex;
     flex-direction: row; }
@@ -66,6 +72,14 @@ ul {
   height: 50%;
   background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%); }
 
+.inputContainer {
+  margin-top: 20px;
+  position: relative; }
+
+#confirmTerms {
+  display: flex;
+  flex-direction: row; }
+
 #emailForm {
   display: flex;
   flex-direction: column;
@@ -74,12 +88,6 @@ ul {
   margin-top: 30px;
   min-height: 244px;
   border-bottom: 1px solid #e3e3e4; }
-  #emailForm .inputContainer {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items: center; }
   #emailForm a {
     color: #131821;
     text-decoration-line: underline; }
@@ -87,9 +95,6 @@ ul {
     color: #4066a5; }
   #emailForm a:active {
     color: #233759; }
-  #emailForm #confirmTerms {
-    display: flex;
-    flex-direction: row; }
   #emailForm h1 {
     font-family: Georgia;
     font-size: 24px;
@@ -108,11 +113,12 @@ ul {
     border-top: 1px solid #e3e3e4;
     border-bottom: 1px solid #e3e3e4;
     border-right: 1px solid #e3e3e4;
+    box-sizing: border-box;
     padding-left: 15px;
     padding-right: 50px;
     font-size: 16px;
     line-height: 24px;
-    height: 56px;
+    height: 60px;
     width: 100%; }
   #emailForm input[type='text']:focus {
     outline: none;
@@ -130,36 +136,46 @@ ul {
   #emailForm input[type='text']:focus + label::before {
     color: #4066a5;
     opacity: 1; }
-  #emailForm #confirmTerms {
-    position: relative;
+
+#emailInputContainer {
+  position: relative;
+  width: 100%; }
+
+#emailInputFloatingContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+#confirmTerms {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px; }
+  #confirmTerms input[type='checkbox'] {
+    opacity: 0;
+    z-index: 2;
+    height: 26px;
+    width: 26px;
+    margin: 0 0 0 0; }
+  #confirmTerms input[type='checkbox'] + label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    border: 1px solid #e3e3e4;
+    height: 24px;
+    width: 24px;
+    border-radius: 3px;
     display: flex;
     align-items: center;
-    margin-top: 20px; }
-    #emailForm #confirmTerms input[type='checkbox'] {
-      opacity: 0;
-      z-index: 2;
-      height: 26px;
-      width: 26px;
-      margin: 0 0 0 0; }
-    #emailForm #confirmTerms input[type='checkbox'] + label {
-      position: absolute;
-      left: 0;
-      top: 0;
-      background: #ffffff;
-      border: 1px solid #e3e3e4;
-      height: 24px;
-      width: 24px;
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    #emailForm #confirmTerms input[type='checkbox']:checked + label {
-      background: #0080ff;
-      border: 1px solid #0080ff; }
-    #emailForm #confirmTerms input[type='checkbox'] + label::before {
-      font-size: 11px; }
-    #emailForm #confirmTerms p {
-      margin-left: 15px; }
+    justify-content: center; }
+  #confirmTerms input[type='checkbox']:checked + label {
+    background: #0080ff;
+    border: 1px solid #0080ff; }
+  #confirmTerms input[type='checkbox'] + label::before {
+    font-size: 11px; }
+  #confirmTerms p {
+    margin-left: 15px; }
 
 #socialsContainer {
   height: 100%;
@@ -214,7 +230,13 @@ ul {
     background-color: #cc0000;
     border: 2px solid #CC0000; }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
+  .hideMobile {
+    display: inline-block; }
+  .navLeft {
+    align-self: center; }
+  .navRight:last-child {
+    margin-right: 100px; }
   #emailBoxContainer {
     position: relative;
     height: 100%;
@@ -223,6 +245,15 @@ ul {
     align-items: center;
     max-width: 400px;
     background: none; }
+    #emailBoxContainer h1 {
+      font-size: 32px;
+      line-height: 44px; }
+    #emailBoxContainer p {
+      font-size: 16px;
+      line-height: 28px; }
+  #emailForm {
+    min-height: auto;
+    padding-bottom: 40px; }
   #floatingBox {
     background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%); }
   #background {
@@ -234,14 +265,38 @@ ul {
     flex-direction: row; }
   #content {
     position: relative;
-    min-width: 600px;
-    background-color: #ffffff; }
+    min-width: 680px;
+    width: 680px;
+    background-color: #ffffff;
+    flex-grow: 1; }
   #navbar {
+    height: auto;
     align-self: flex-start;
     margin-top: 100px; }
+    #navbar .navRight a {
+      font-size: 16px; }
     #navbar #pineapple {
-      margin-left: 100px; }
-    #navbar .navRight:last-child {
-      margin-right: 100px; }
+      margin-top: -10px;
+      margin-left: 100px;
+      margin-right: 15px; }
+    #navbar li.hideMobile {
+      font-size: 16px; }
   #socialsContainer {
-    height: auto; } }
+    height: auto; }
+  .inputContainer {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  #emailInputContainer {
+    position: relative;
+    height: 60px; }
+  #emailInputFloatingContainer {
+    height: 70px;
+    position: absolute;
+    width: 660px;
+    margin-left: -30px; }
+    #emailInputFloatingContainer input[type='text'] + label::before {
+      margin-right: 40px; }
+    #emailInputFloatingContainer span.blueBorder {
+      height: 100%; }
+    #emailInputFloatingContainer input[type='text'] {
+      height: 100%; } }
