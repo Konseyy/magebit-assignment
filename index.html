@@ -27,15 +27,27 @@
       <main>
          <div id="emailBoxContainer">
             <form id="emailForm">
-					<h1>Subscribe to newsletter</h1>
-					<p>Subscribe to our newsletter and get 10% discount on pineapple glasses.</p>
-					<input type="text">
-					<div id="confirmTerms">
-						<input id="agreeToTerms" type="checkbox" name="check">
-					<label for="check"></label>
-					<p>I agree to <a id="terms" href="#">terms of service</a></p>
-					</div>
-				</form>
+               <h1>Subscribe to newsletter</h1>
+               <p>
+                  Subscribe to our newsletter and get 10% discount on pineapple
+                  glasses.
+               </p>
+               <div class="inputContainer">
+                  <span class="blueBorder"></span>
+                  <input
+                     type="text"
+                     name="email"
+                     placeholder="Type your email address here..."
+                  />
+                  <label for="email" class="icon-ic_arrow"></label>
+               </div>
+
+               <div id="confirmTerms">
+                  <input id="agreeToTerms" type="checkbox" name="check" />
+                  <label for="check" class="icon-ic_checkmark"></label>
+                  <p>I agree to <a id="terms" href="#">terms of service</a></p>
+               </div>
+            </form>
             <div id="socialsContainer">
                <ul id="socials">
                   <li>

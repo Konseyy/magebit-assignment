@@ -6,7 +6,8 @@
   font-style: normal;
   font-display: block; }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'magebit-icons' !important;
   speak: never;
@@ -20,28 +21,28 @@
   -moz-osx-font-smoothing: grayscale; }
 
 .icon-ic_arrow:before {
-  content: "\e901"; }
+  content: '\e901'; }
 
 .icon-ic_checkmark:before {
-  content: "\e902";
+  content: '\e902';
   color: #fff; }
 
 .icon-ic_youtube:before {
-  content: "\e905";
+  content: '\e905';
   color: #fff; }
 
 .icon-ic_twitter:before {
-  content: "\e906";
+  content: '\e906';
   color: #fff; }
 
 .icon-ic_facebook:before {
-  content: "\e907";
+  content: '\e907';
   color: #fff; }
 
 .icon-ic_instagram:before {
-  content: "\e908";
+  content: '\e908';
   color: #fff; }
 
 .icon-logo_pineapple:before {
-  content: "\e909";
+  content: '\e909';
   color: #4066a5; }

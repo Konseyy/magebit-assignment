@@ -58,7 +58,14 @@ main {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 30px;
-  min-height: 274px; }
+  min-height: 244px;
+  border-bottom: 1px solid #e3e3e4; }
+  #emailForm .inputContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center; }
   #emailForm a {
     color: #131821;
     text-decoration-line: underline; }
@@ -78,34 +85,75 @@ main {
     font-size: 14px;
     line-height: 26px;
     color: #6a707b; }
+  #emailForm span.blueBorder {
+    height: 60px;
+    width: 4px;
+    background-color: #4066a5; }
   #emailForm input[type='text'] {
-    margin-top: 20px; }
+    border-left: none;
+    border-top: 1px solid #e3e3e4;
+    border-bottom: 1px solid #e3e3e4;
+    border-right: 1px solid #e3e3e4;
+    padding-left: 15px;
+    padding-right: 50px;
+    font-size: 16px;
+    line-height: 24px;
+    height: 56px;
+    width: 100%; }
+  #emailForm input[type='text']:focus {
+    outline: none;
+    border-top: 1px solid #4066a5;
+    border-bottom: 1px solid #4066a5;
+    border-right: 1px solid #4066a5; }
+  #emailForm input[type='text'] + label {
+    height: 14px; }
+  #emailForm input[type='text'] + label::before {
+    position: absolute;
+    right: 15px;
+    font-size: 14px;
+    color: #131821;
+    opacity: 0.3; }
+  #emailForm input[type='text']:focus + label::before {
+    color: #4066a5;
+    opacity: 1; }
   #emailForm #confirmTerms {
+    position: relative;
+    display: flex;
+    align-items: center;
     margin-top: 20px; }
     #emailForm #confirmTerms input[type='checkbox'] {
-      display: none; }
+      opacity: 0;
+      z-index: 2;
+      height: 26px;
+      width: 26px;
+      margin: 0 0 0 0; }
     #emailForm #confirmTerms input[type='checkbox'] + label {
-      background: #999;
-      height: 16px;
-      width: 16px;
-      display: inline-block;
-      padding: 0 0 0 0px; }
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #ffffff;
+      border: 1px solid #e3e3e4;
+      height: 24px;
+      width: 24px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     #emailForm #confirmTerms input[type='checkbox']:checked + label {
       background: #0080ff;
-      height: 16px;
-      width: 16px;
-      display: inline-block;
-      padding: 0 0 0 0px; }
+      border: 1px solid #0080ff; }
+    #emailForm #confirmTerms input[type='checkbox'] + label::before {
+      font-size: 11px; }
+    #emailForm #confirmTerms p {
+      margin-left: 15px; }
 
 #socialsContainer {
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-end; }
+  justify-content: center; }
 
 #socials {
-  position: relative;
-  margin-bottom: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   gap: 10px; }
