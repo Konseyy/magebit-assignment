@@ -9,11 +9,13 @@ const EmailsViewer = () => {
    const [searchTerm, setSearchTerm] = React.useState('');
    const [selectedIds, setSelectedIds] = React.useState([]);
    const [selectedEmails, setSelectedEmails] = React.useState([]);
-   const getInitialInfo = async () => {
-      let url = `./backend/getEmails.php?page=${currentPage}&sort=${sorter}_${sortingDirection}${
+   const getApiUrl = () => {
+      return `./backend/getEmails.php?page=${currentPage}&sort=${sorter}_${sortingDirection}${
          selectedProvider !== 'all' ? '&provider=' + selectedProvider : ''
       }${searchTerm !== '' ? '&search=' + searchTerm : ''}`;
-      const intialResponse = await fetch(url);
+   };
+   const getInitialInfo = async () => {
+      const intialResponse = await fetch(getApiUrl());
       if (!intialResponse) return;
       const res = await intialResponse.json();
       setTotalPages(res.pager.total_pages);
@@ -25,10 +27,7 @@ const EmailsViewer = () => {
       setProviders(provRes.data.providers);
    };
    const loadData = async () => {
-      let url = `./backend/getEmails.php?page=${currentPage}&sort=${sorter}_${sortingDirection}${
-         selectedProvider !== 'all' ? '&provider=' + selectedProvider : ''
-      }${searchTerm !== '' ? '&search=' + searchTerm : ''}`;
-      const resp = await fetch(url, { method: 'get' });
+      const resp = await fetch(getApiUrl());
       if (!resp) return;
       const res = await resp.json();
       setCurrentPage(res.pager.current_page);
