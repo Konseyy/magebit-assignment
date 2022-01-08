@@ -50,7 +50,7 @@ const EmailsViewer = () => {
    React.useEffect(() => {
       loadData();
    }, [sortingDirection, sorter, selectedProvider, currentPage]);
-   const downloadCSV = async () => {
+   const downloadCSV = () => {
       const csvMap = selectedEmails.map((em) => {
          return [em.email_string, em.email_provider, em.email_added];
       });
