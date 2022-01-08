@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Magebit Assignment</title>
+      <title>Valdis Guntis Bukalders Magebit Assignment</title>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="css/reset.css" />
       <link rel="stylesheet" href="css/icon-font.css" />
       <link rel="stylesheet" href="css/main.css" />
+      <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+      <script type="text/babel" src="components/SubscribeBox.jsx"></script>
    </head>
    <body>
       <div id="content">
@@ -30,45 +34,17 @@
          </nav>
          <div id="floatingBox">
             <div id="emailBoxContainer">
-               <form id="emailForm">
-                  <h1>Subscribe to newsletter</h1>
-                  <p>Subscribe to our newsletter and get 10% discount on pineapple glasses.</p>
-                  <div class="inputContainer">
-                     <div id="emailInputContainer">
-                        <div id="emailInputFloatingContainer">
-                           <span class="blueBorder"></span>
-                           <input type="text" name="email" placeholder="Type your email address here..." />
-                           <label for="email" class="icon-ic_arrow"></label>
-                        </div>
-                     </div>
+               <noscript>
+                  <div id="emailForm">
+                     <p>This page needs JavaScript enabled to work</p>
                   </div>
-
-                  <div id="confirmTerms">
-                     <input id="agreeToTerms" type="checkbox" name="check" />
-                     <label for="check" class="icon-ic_checkmark"></label>
-
-                     <p>I agree to <a id="terms" href="#">terms of service</a></p>
-                  </div>
-               </form>
-               <div id="socialsContainer">
-                  <ul id="socials">
-                     <li>
-                        <a href="#" class="icon-ic_facebook"></a>
-                     </li>
-                     <li>
-                        <a href="#" class="icon-ic_instagram"> </a>
-                     </li>
-                     <li>
-                        <a href="#" class="icon-ic_twitter"></a>
-                     </li>
-                     <li>
-                        <a href="#" class="icon-ic_youtube"></a>
-                     </li>
-                  </ul>
-               </div>
+               </noscript>
             </div>
          </div>
       </div>
-      <div id="background"></div>
+      <div id="background" />
    </body>
+   <script type="text/babel">
+      ReactDOM.render(<SubscribeBox />, document.getElementById('emailBoxContainer'));
+   </script>
 </html>

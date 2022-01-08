@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 body * {
   color: black;
@@ -14,6 +14,14 @@ ul {
 
 .hideMobile {
   display: none; }
+
+.errorMsg {
+  color: #dd0000;
+  margin-top: 2px; }
+
+.icon-ic_trophy {
+  font-size: 70px;
+  margin-bottom: 40px; }
 
 #navbar {
   width: 100%;
