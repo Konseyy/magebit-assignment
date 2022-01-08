@@ -1,10 +1,16 @@
 <?php
+
+require __DIR__ . './envReader.php';
+
+use envReader\DotEnv;
+
+(new DotEnv(__DIR__ . '/../.env'))->load();
 function connectDB()
 {
-	$servername = "localhost";
-	$username = "root";
-	$password = "test12345";
-	$db_name = "magebit";
+	$servername = getenv("DB_SERVERNAME");
+	$username = getenv("DB_USERNAME");
+	$password = getenv("DB_PASS");
+	$db_name = getenv("DB_DB_NAME");
 	$db = new mysqli($servername, $username, $password);
 	if ($db->connect_error) {
 		die("Connection failed: " . $db->connect_error);
