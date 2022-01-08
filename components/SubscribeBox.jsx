@@ -62,7 +62,7 @@ const SubscribeBox = () => {
                         />
                         <label onClick={submitFormRef} htmlFor="email" className="icon-ic_arrow"></label>
                      </div>
-                     <p className="errorMsg">{errorMsg}</p>
+                     {errorMsg.length !== 0 && <p className="errorMsg">{errorMsg}</p>}
                   </div>
                </div>
 
