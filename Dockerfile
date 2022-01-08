@@ -1,9 +1,3 @@
-FROM node:alpine
-WORKDIR /app
-COPY package.json ./
-COPY package-lock.json ./
-COPY ./ ./
-RUN pwd
-RUN npm i
-RUN npm run build
-CMD npm run start
+FROM php:fpm-alpine
+CMD ["php-fpm"]
+EXPOSE 9000

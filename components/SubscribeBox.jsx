@@ -38,10 +38,21 @@ const SubscribeBox = () => {
       setErrorMsg('');
       return true;
    };
-   const submit = (event) => {
+   const submit = async (event) => {
       event.preventDefault();
       if (!validateInput(email)) return;
-      console.log('validation passed', email);
+      const response = await fetch(`./backend/submit.php?email=${email}`, {
+         method: 'get',
+      });
+      if (!response) {
+         setErrorMsg('No response from server');
+         return;
+      }
+      const res = await response.json();
+      if (res.message !== 'success') {
+         setErrorMsg('Failure to submit');
+         return;
+      }
       setSubmitted(true);
    };
    return (
@@ -62,9 +73,9 @@ const SubscribeBox = () => {
                         />
                         <label onClick={submitFormRef} htmlFor="email" className="icon-ic_arrow"></label>
                      </div>
-                     {errorMsg.length !== 0 && <p className="errorMsg">{errorMsg}</p>}
                   </div>
                </div>
+               {errorMsg.length !== 0 && <p id="errorMsg">{errorMsg}</p>}
 
                <div id="confirmTerms" style={{ marginTop: errorMsg.length ? 5 : 10 }}>
                   <input id="agreeToTerms" type="checkbox" name="check" ref={acceptTermsCheckboxRef} />
