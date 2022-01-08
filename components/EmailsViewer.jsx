@@ -16,7 +16,6 @@ const EmailsViewer = () => {
       const intialResponse = await fetch(url);
       if (!intialResponse) return;
       const res = await intialResponse.json();
-      console.log(res);
       setTotalPages(res.pager.total_pages);
       setDisplayEmails(res.data);
       setCurrentPage(res.pager.current_page);
@@ -54,22 +53,18 @@ const EmailsViewer = () => {
    }, [sortingDirection, sorter, selectedProvider, currentPage]);
    const downloadCSV = async () => {
       const csvMap = selectedEmails.map((em) => {
-         console.log(em);
          return [em.email_string, em.email_provider, em.email_added];
       });
-      console.log('map', csvMap);
       let csvData = 'Email,Provider,Added\n';
       csvMap.forEach((row) => {
          csvData += row.join(',');
          csvData += '\n';
       });
-      console.log(csvData);
       const csvElem = document.createElement('a');
       csvElem.href = 'data:text/csv;charset=utf-8,' + encodeURI(csvData);
       csvElem.target = '_blank';
       csvElem.download = `csv_export_${new Date().getTime()}.csv`;
       csvElem.click();
-      console.log(csvElem.download);
    };
    const pages = [];
    for (let i = 0; i < totalPages; i++) {
