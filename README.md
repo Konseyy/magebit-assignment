@@ -1,3 +1,14 @@
+# Features
+## Landing page
+file : `index.html`
+<br>
+Contains a landing page with response design for both desktop and mobile that serves as a frontend for submitting data to the backend part of this project.
+## Emails page
+file : `emails.html`
+<br>
+Page that lets the user query the emails submitted through the landing page by email providers, and search terms, along with sorting and pagination implemented.
+<br>
+Also allows the user to delete entries from the database, as well as download selected entries as a .csv file
 # Local installation instructions
 ## Setup
 Make sure you have a local php development server (like [XAMPP](https://www.apachefriends.org/index.html)) and [git](https://git-scm.com/downloads) installed.
@@ -29,4 +40,3 @@ Make sure you have [Node.js](https://nodejs.org/en/download/) installed.
 After installing node, navigate to the project directory and install the required node packages with `npm install`
 ## Making changes
 Before making changes to .scss files remember to run `npm run sass` which will automatically generate .css files from the .scss files you're editing as soon as you save your changes to the file
-
