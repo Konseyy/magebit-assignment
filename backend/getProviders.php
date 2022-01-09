@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . './db.php';
 $db = connectDB();
+header("Content-type: application/json");
 $query = "select distinct email_provider from emails";
 $results = mysqli_query($db, $query);
 $return = [];
