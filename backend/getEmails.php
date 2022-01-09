@@ -69,6 +69,6 @@ if (isset($_GET["page"]) and $_GET["page"] !== "") {
 			$pages = (($rows - $rows % 10) / 10) + 1;
 		}
 	}
-	$pager = ["current_page" => $page, "total_pages" => $pages, "rows"=>$rows];
+	$pager = ["current_page" => $page, "total_pages" => $pages, "rows" => $rows];
 	echo json_encode(["data" => $result, "pager" => $pager]);
 }

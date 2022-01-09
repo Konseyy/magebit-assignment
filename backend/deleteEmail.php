@@ -7,7 +7,7 @@ if (isset($_GET["id"]) and $_GET["id"] !== "") {
 	$query = "delete from emails where id =" . $toDelete;
 	$result = mysqli_query($db, $query);
 	if (!$result) {
-		echo json_encode(["message" => "fail", "error_message"=>"Failed to delete entry with id ".strval($toDelete)." from database"]);
+		echo json_encode(["message" => "fail", "error_message" => "Failed to delete entry with id " . strval($toDelete) . " from database"]);
 	} else {
 		echo json_encode(["message" => "success"]);
 	}
