@@ -41,7 +41,7 @@ const SubscribeBox = () => {
    const submit = async (event) => {
       event.preventDefault();
       if (!validateInput(email)) return;
-      const response = await fetch(`/backend/submit.php?email=${email}`, {
+      const response = await fetch(`backend/submit.php?email=${email}`, {
          method: 'get',
       });
       if (!response) {
@@ -56,7 +56,7 @@ const SubscribeBox = () => {
       setSubmitted(true);
    };
    return (
-      <div>
+      <div id="emailBoxContainer" className={submitted ? 'submitted' : 'notSubmitted'}>
          {!submitted ? (
             <form ref={formElementRef} id="emailForm" onSubmit={submit}>
                <h1>Subscribe to newsletter</h1>
@@ -77,7 +77,7 @@ const SubscribeBox = () => {
                </div>
                {errorMsg.length !== 0 && <p id="errorMsg">{errorMsg}</p>}
 
-               <div id="confirmTerms" style={{ marginTop: errorMsg.length ? 5 : 10 }}>
+               <div id="confirmTerms" style={{ marginTop: errorMsg.length ? 5 : '' }}>
                   <input id="agreeToTerms" type="checkbox" name="check" ref={acceptTermsCheckboxRef} />
                   <label htmlFor="check" className="icon-ic_checkmark"></label>
                   <p>

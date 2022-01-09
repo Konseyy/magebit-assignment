@@ -15,10 +15,6 @@ ul {
 .hideMobile {
   display: none; }
 
-.icon-ic_trophy {
-  font-size: 70px;
-  margin-bottom: 40px; }
-
 #navbar {
   width: 100%;
   height: 66px;
@@ -62,9 +58,10 @@ ul {
   width: 100%; }
 
 #background {
-  height: 100%;
+  height: calc(100% - 66px);
+  margin-top: 66px;
   width: 100%;
-  background-image: url("../img/image_summer.png");
+  background-image: url("../img/image_summer_mobile.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 55% 100%; }
@@ -185,7 +182,9 @@ ul {
   #confirmTerms input[type='checkbox'] + label::before {
     font-size: 11px; }
   #confirmTerms p {
-    margin-left: 15px; }
+    margin-left: 16px;
+    margin-top: 2px;
+    font-size: 16px; }
 
 #socialsContainer {
   height: 100%;
@@ -216,10 +215,10 @@ ul {
     font-size: 16px; }
   #socials a.icon-ic_facebook::before {
     font-size: 16px; }
-  #socials a:before {
+  #socials a::before {
     font-size: 16px;
     color: #131821;
-    opacity: 0.3; }
+    opacity: 0.4; }
   #socials a:hover:before {
     color: #ffffff;
     opacity: 1; }
@@ -252,7 +251,22 @@ p#errorMsg {
   color: #dd0000;
   margin-top: 2px; }
 
+#emailBoxContainer.submitted .icon-ic_trophy {
+  font-size: 70px;
+  margin-bottom: 40px; }
+
 @media only screen and (min-width: 800px) {
+  #emailBoxContainer.submitted {
+    height: 100%;
+    justify-content: flex-start;
+    margin-top: 250px; }
+    #emailBoxContainer.submitted .icon-ic_trophy {
+      font-size: 70px;
+      margin-bottom: 30px; }
+    #emailBoxContainer.submitted h1 {
+      margin-bottom: 22px; }
+    #emailBoxContainer.submitted #emailForm {
+      padding-bottom: 48px; }
   .hideMobile {
     display: inline-block; }
   .navLeft {
@@ -263,8 +277,6 @@ p#errorMsg {
   #emailBoxContainer {
     min-width: 355px;
     position: relative;
-    height: 100%;
-    width: 100%;
     margin-bottom: 58px;
     justify-content: center;
     align-items: center;
@@ -287,8 +299,11 @@ p#errorMsg {
   #floatingBox {
     background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%); }
   #background {
+    margin-top: 0;
+    height: 100%;
     background-size: cover;
-    background-position: 0 50%; }
+    background-position: 0 50%;
+    background-image: url("../img/image_summer_desktop.png"); }
   body {
     display: flex;
     flex-direction: row; }
@@ -338,6 +353,8 @@ p#errorMsg {
     gap: 20px;
     margin-top: 50px;
     margin-right: 0; }
+    #socials a::before {
+      opacity: 0.3; }
   .navRight li {
     margin-right: 0;
     margin-left: 30px; }

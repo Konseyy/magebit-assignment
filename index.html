@@ -33,18 +33,16 @@
             </ul>
          </nav>
          <div id="floatingBox">
-            <div id="emailBoxContainer">
-               <noscript>
-                  <div id="emailForm">
-                     <p>This page needs JavaScript enabled to work</p>
-                  </div>
-               </noscript>
-            </div>
+            <noscript>
+               <div id="emailForm">
+                  <p>This page needs JavaScript enabled to work</p>
+               </div>
+            </noscript>
          </div>
       </div>
       <div id="background" />
    </body>
    <script type="text/babel">
-      ReactDOM.render(<SubscribeBox />, document.getElementById('emailBoxContainer'));
+      ReactDOM.render(<SubscribeBox />, document.getElementById('floatingBox'));
    </script>
 </html>
