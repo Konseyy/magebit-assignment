@@ -3,6 +3,8 @@
 Make sure you have a local php development server (like [XAMPP](https://www.apachefriends.org/index.html)) and [git](https://git-scm.com/downloads) installed.
 ## Change your working directory to the respective development server's 
 For XAMPP this would be something like `…/XAMPP/htdocs/`
+<br>
+For WAMP on windows this would be something like `c:\wamp\www\`
 ## Clone the repository
 Clone the repository in the previously opened directory using the git clone command
 <br>
