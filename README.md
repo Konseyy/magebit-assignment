@@ -6,7 +6,7 @@ For XAMPP this would be something like `…/XAMPP/htdocs/`
 <br>
 For WAMP on windows this would be something like `c:\wamp\www\`
 ## Clone the repository
-Clone the repository in the previously opened directory using the git clone command
+Clone the repository in the previously opened directory by opening a terminal session in the directory and using the git clone command
 <br>
 `git clone https://github.com/Konseyy/magebit-assignment.git`
 ## Make local environment variables
