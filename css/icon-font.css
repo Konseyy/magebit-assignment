@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'magebit-icons';
-  src: url("fonts/magebit-icons.eot?xfvymk");
-  src: url("fonts/magebit-icons.eot?xfvymk#iefix") format("embedded-opentype"), url("fonts/magebit-icons.ttf?xfvymk") format("truetype"), url("fonts/magebit-icons.woff?xfvymk") format("woff"), url("fonts/magebit-icons.svg?xfvymk#magebit-icons") format("svg");
+  src: url("fonts/magebit-icons.eot?bdb4p4");
+  src: url("fonts/magebit-icons.eot?bdb4p4#iefix") format("embedded-opentype"), url("fonts/magebit-icons.ttf?bdb4p4") format("truetype"), url("fonts/magebit-icons.woff?bdb4p4") format("woff"), url("fonts/magebit-icons.svg?bdb4p4#magebit-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -20,44 +20,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-ic_trophy .path1:before {
+.icon-ic_trophy:before {
   content: '\e903';
   color: #4066a5; }
-
-.icon-ic_trophy .path2:before {
-  content: '\e904';
-  margin-left: -0.62890625em;
-  color: #4066a5; }
-
-.icon-ic_trophy .path3:before {
-  content: '\e90a';
-  margin-left: -0.62890625em;
-  color: #4066a5;
-  opacity: 0.3; }
-
-.icon-ic_trophy .path4:before {
-  content: '\e90b';
-  margin-left: -0.62890625em;
-  color: #4066a5;
-  opacity: 0.3; }
-
-.icon-ic_trophy .path5:before {
-  content: '\e90c';
-  margin-left: -0.62890625em;
-  color: #4066a5;
-  opacity: 0.3; }
-
-.icon-ic_trophy .path6:before {
-  content: '\e90d';
-  margin-left: -0.62890625em;
-  color: #4066a5;
-  opacity: 0.3; }
-
-.icon-ic_trophy .path7:before {
-  content: '\e90e';
-  margin-left: -0.62890625em;
-  color: #4066a5;
-  opacity: 0.3; }
 
 .icon-text_pineapple:before {
   content: '\e900'; }
