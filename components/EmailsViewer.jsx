@@ -10,7 +10,7 @@ const EmailsViewer = () => {
    const [selectedIds, setSelectedIds] = React.useState([]);
    const [selectedEmails, setSelectedEmails] = React.useState([]);
    const getApiUrl = () => {
-      return `./backend/getEmails.php?page=${currentPage}&sort=${sorter}_${sortingDirection}${
+      return `/backend/getEmails.php?page=${currentPage}&sort=${sorter}_${sortingDirection}${
          selectedProvider !== 'all' ? '&provider=' + selectedProvider : ''
       }${searchTerm !== '' ? '&search=' + searchTerm : ''}`;
    };
@@ -21,7 +21,7 @@ const EmailsViewer = () => {
       setTotalPages(res.pager.total_pages);
       setDisplayEmails(res.data);
       setCurrentPage(res.pager.current_page);
-      const intialProviders = await fetch('./backend/getProviders.php');
+      const intialProviders = await fetch('/backend/getProviders.php');
       if (!intialProviders) return;
       const provRes = await intialProviders.json();
       setProviders(provRes.data.providers);
@@ -35,7 +35,7 @@ const EmailsViewer = () => {
       setDisplayEmails(res.data);
    };
    const deleteEmail = async (id) => {
-      const deleteResponse = await fetch(`./backend/deleteEmail.php?id=${id}`);
+      const deleteResponse = await fetch(`/backend/deleteEmail.php?id=${id}`);
       if (!deleteResponse) return;
       const delRes = await deleteResponse.json();
       if (delRes.message === 'fail') {
