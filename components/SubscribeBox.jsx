@@ -49,7 +49,7 @@ const SubscribeBox = () => {
          return;
       }
       const res = await response.json();
-      if (res.message !== 'success') {
+      if (res.result !== 'success') {
          setErrorMsg('Failure to submit');
          return;
       }

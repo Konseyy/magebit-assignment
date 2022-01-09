@@ -94,10 +94,7 @@ const EmailsViewer = () => {
          <div id="pageSelect" style={{ flexDirection: 'row', marginTop: 10 }}>
             {pages.map((page) => {
                return (
-                  <button
-                     style={{ backgroundColor: page === currentPage ? 'gray' : 'lightgray' }}
-                     onClick={() => setCurrentPage(page)}
-                  >
+                  <button style={{ backgroundColor: page === currentPage ? 'gray' : 'lightgray' }} onClick={() => setCurrentPage(page)}>
                      {page + 1}
                   </button>
                );
