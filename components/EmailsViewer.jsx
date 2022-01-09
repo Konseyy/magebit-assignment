@@ -86,7 +86,7 @@ const EmailsViewer = () => {
             </select>
             <select onChange={(e) => setSorter(e.target.value)}>
                <option value="email">Order by email</option>
-               <option value="date">Order by date</option>
+               <option selected value="date">Order by date</option>
             </select>
             <select onChange={(e) => setSortingDirection(e.target.value)}>
                <option value="desc">Descending</option>
