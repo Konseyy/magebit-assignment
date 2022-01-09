@@ -33,6 +33,10 @@ const EmailsViewer = () => {
       setCurrentPage(res.pager.current_page);
       setTotalPages(res.pager.total_pages);
       setDisplayEmails(res.data);
+      const newProviders = await fetch('/backend/getProviders.php');
+      if (!newProviders) return;
+      const provRes = await newProviders.json();
+      setProviders(provRes.data.providers);
    };
    const deleteEmail = async (id) => {
       const deleteResponse = await fetch(`/backend/deleteEmail.php?id=${id}`);
