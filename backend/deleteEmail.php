@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . './db.php';
+require __DIR__ . '/db.php';
 $db = connectDB();
 header("Content-type: application/json");
 if (isset($_GET["id"]) and $_GET["id"] !== "") {

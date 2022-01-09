@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . './db.php';
+require __DIR__ . '/db.php';
 header("Content-type: application/json");
 function extractProvider($emailString)
 {

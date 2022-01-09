@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . './envReader.php';
+require __DIR__ . '/envReader.php';
 
 use envReader\DotEnv;
 
@@ -20,12 +20,7 @@ function connectDB()
 	if (!$db_selected) {
 		// If we couldn't, then it either doesn't exist, or we can't see it.
 		$sql = 'CREATE DATABASE ' . $db_name;
-
-		if (mysqli_query($db, $sql)) {
-			echo "Database my_db created successfully\n";
-		} else {
-			echo 'Error creating database';
-		}
+		mysqli_query($db, $sql);
 	}
 	$query = "select id from emails";
 	$result = mysqli_query($db, $query);
