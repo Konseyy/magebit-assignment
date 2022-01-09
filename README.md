@@ -1,70 +1,42 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Features
+## Landing page
+file : `index.html`
+<br>
+Contains a landing page with response design for both desktop and mobile that serves as a frontend for submitting data to the backend part of this project.
+## Emails page
+file : `emails.html`
+<br>
+Page that lets the user query the emails submitted through the landing page by email providers, and search terms, along with sorting and pagination implemented.
+<br>
+Also allows the user to delete entries from the database, as well as download selected entries as a .csv file
+# Local installation instructions
+## Setup
+Make sure you have a local php development server (like [XAMPP](https://www.apachefriends.org/index.html)) and [git](https://git-scm.com/downloads) installed.
+## Change your working directory to the respective development server's 
+For XAMPP this would be something like `…/XAMPP/htdocs/`
+<br>
+For WAMP on windows this would be something like `c:\wamp\www\`
+## Clone the repository
+Clone the repository in the previously opened directory by opening a terminal session in the directory and using the git clone command
+<br>
+`git clone https://github.com/Konseyy/magebit-assignment.git`
+## Make local environment variables
+Make a new file in the project's root directory called `.env` with the following contents:
+```
+DB_SERVERNAME=localhost
+DB_USERNAME={your mysql username}
+DB_PASS={your mysql password}
+DB_DB_NAME={name of the mysql database you want to use for this project}
+```
+replace the parts wrapped in { } with the respective variable values
+## Turn on the development server
+Make sure your chosen development server is turned on and then navigate to the sever's hosted address in the browsers `http://localhost/magebit-assignment/` and make sure the webpage loads
+<br>
+You can also navigate to the emails page by going to the address `http://localhost/magebit-assignment/emails.html`
+# Making changes to .scss
+## Setup
+Make sure you have [Node.js](https://nodejs.org/en/download/) installed.
+<br>
+After installing node, navigate to the project directory and install the required node packages with `npm install`
+## Making changes
+Before making changes to .scss files remember to run `npm run sass` which will automatically generate .css files from the .scss files you're editing as soon as you save your changes to the file
