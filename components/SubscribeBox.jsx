@@ -2,8 +2,8 @@ const SubscribeBox = () => {
    const [submitted, setSubmitted] = React.useState(false);
    const [email, setEmail] = React.useState('');
    const [errorMsg, setErrorMsg] = React.useState('');
+   const [acceptedTerms, setAcceptedTerms] = React.useState(false);
    const formElementRef = React.useRef(null);
-   const acceptTermsCheckboxRef = React.useRef(null);
    const submitFormRef = () => {
       const form = formElementRef.current;
       if (typeof form.requestSubmit === 'function') {
@@ -27,7 +27,7 @@ const SubscribeBox = () => {
          setErrorMsg('Please provide a valid e-mail address');
          return false;
       }
-      if (!acceptTermsCheckboxRef.current.checked) {
+      if (!acceptedTerms) {
          setErrorMsg('You must accept the terms and conditions');
          return false;
       }
@@ -78,8 +78,8 @@ const SubscribeBox = () => {
                {errorMsg.length !== 0 && <p id="errorMsg">{errorMsg}</p>}
 
                <div id="confirmTerms" style={{ marginTop: errorMsg.length ? 5 : '' }}>
-                  <input id="agreeToTerms" type="checkbox" name="check" ref={acceptTermsCheckboxRef} />
-                  <label htmlFor="check" className="icon-ic_checkmark"></label>
+                  <input id="agreeToTerms" type="checkbox" name="check" onChange={(e) => setAcceptedTerms(e.target.checked)} />
+                  <label htmlFor="check" className={acceptedTerms ? 'icon-ic_checkmark' : ''}></label>
                   <p>
                      I agree to{' '}
                      <a id="terms" href="#">
