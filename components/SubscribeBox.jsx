@@ -41,7 +41,7 @@ const SubscribeBox = () => {
    const submit = async (event) => {
       event.preventDefault();
       if (!validateInput(email)) return;
-      const response = await fetch(`backend/submit.php?email=${email}`, {
+      const response = await fetch(`/backend/submit.php?email=${email}`, {
          method: 'get',
       });
       if (!response) {
