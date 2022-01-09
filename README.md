@@ -1,6 +1,6 @@
 # Local installation instructions
 ## Setup
-Make sure you have a local development server (like [XAMPP](https://www.apachefriends.org/index.html)) and [git](https://git-scm.com/downloads) installed.
+Make sure you have a local php development server (like [XAMPP](https://www.apachefriends.org/index.html)) and [git](https://git-scm.com/downloads) installed.
 ## Change your working directory to the respective development server's 
 For XAMPP this would be something like `…/XAMPP/htdocs/`
 ## Clone the repository
